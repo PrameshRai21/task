@@ -18,6 +18,7 @@ import {
   getModalContent,
   getPromptDialogContent,
 } from '@Constants/modalContents';
+import Banner from '@Components/common/Layouts/Flex/Banner';
 
 export default function App() {
   const { pathname } = useLocation();
@@ -56,43 +57,7 @@ export default function App() {
 
   return (
     <>
-      {process.env.NODE_ENV !== 'production' &&
-        !process.env.DISABLE_DOM_TO_CODE &&
-        initDomToCode()}
-      <div
-        className={`${
-          hideSideBar
-            ? 'naxatw-ml-0'
-            : `naxatw-ml-0 naxatw-flex md:naxatw-ml-[80px]`
-        }`}
-      >
-        <ToastContainer />
-
-        <Modal
-          show={showModal}
-          className={getModalContent(modalContent)?.className || ''}
-          title={getModalContent(modalContent)?.title}
-          onClose={handleModalClose}
-          hideCloseButton={!!getModalContent(modalContent)?.hideCloseButton}
-        >
-          {getModalContent(modalContent)?.content}
-        </Modal>
-
-        <PromptDialog
-          show={showPromptDialog}
-          title={getPromptDialogContent(promptDialogContent)?.title}
-          onClose={handlePromptDialogClose}
-        >
-          {getPromptDialogContent(promptDialogContent)?.content}
-        </PromptDialog>
-
-        {generateRoutes({
-          routes:
-            process.env.NODE_ENV !== 'production'
-              ? [...testRoutes, ...appRoutes]
-              : appRoutes,
-        })}
-      </div>
+      <Banner />
     </>
   );
 }
