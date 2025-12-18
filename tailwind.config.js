@@ -6,12 +6,18 @@ module.exports = {
       center: true,
       padding: '2rem',
       screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
         '2xl': '1400px',
       },
     },
     extend: {
       fontFamily: {
-        primary: ['DM Sans', 'sans-serif'],
+        primary: ['Red Hat Display', 'sans-serif'],
+        comfortaa: ['Comfortaa', 'sans-serif'],
+        devnagari: ['Noto Sans Devanagari', 'sans-serif'],
       },
       colors: {
         primary: {
@@ -19,10 +25,10 @@ module.exports = {
           100: '#BADFFF',
           200: '#5BB6FF',
           300: '#0097FF',
-          400: '#0088F8',
+          400: '#1A83FB',
           500: '#0077E4',
           600: '#0664D2',
-          700: '#0A45B3',
+          700: '#0056b8',
           800: '#003675',
           900: '#0F204C',
         },
@@ -50,6 +56,7 @@ module.exports = {
           800: '#484848',
           900: '#212121',
         },
+        'light-grey': '#fff3f2',
       },
 
       fontSize: {
