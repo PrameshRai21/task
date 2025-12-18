@@ -1,11 +1,11 @@
-import emblem from '../../../../assets/images/emblem.png';
-import laptop_image from '../../../../assets/images/laptop.png';
-import flag from '../../../../assets/images/nepal_flag.png';
+import emblem from '../../../assets/images/emblem.png';
+import laptop_image from '../../../assets/images/laptop.png';
+import flag from '../../../assets/images/nepal_flag.png';
 
 function Banner() {
   return (
     // main container starts here
-    <div className="container naxatw-mx-10  naxatw-h-auto naxatw-rounded-b-[20px] naxatw-bg-gradient-to-t naxatw-from-primary-600 naxatw-to-primary-400">
+    <div className="container naxatw-mx-5 naxatw-mb-5 naxatw-h-auto naxatw-rounded-b-[20px] naxatw-bg-gradient-to-t naxatw-from-primary-600 naxatw-to-primary-400 lg:naxatw-mx-10 lg:naxatw-mb-10">
       {/* header content starts here */}
       <div className="head_container naxatw-flex naxatw-flex-col-reverse naxatw-justify-between naxatw-gap-y-10 naxatw-px-10 naxatw-pt-5 lg:naxatw-flex-row">
         <div className="naxatw-flex">
@@ -53,18 +53,18 @@ function Banner() {
         </div>
       </div>
       {/* main section starts here */}
-      <div className="main naxatw-flex naxatw-flex-col naxatw-rounded-b-lg naxatw-px-10 naxatw-py-8 naxatw-text-white lg:naxatw-flex-row">
+      <div className="main naxatw-flex naxatw-flex-col naxatw-rounded-b-lg naxatw-px-10 naxatw-pb-8 naxatw-pt-2 naxatw-text-white lg:naxatw-flex-row lg:naxatw-pt-8">
         {/* text content starts here */}
         <div className="naxatw-text-content naxatw-flex naxatw-h-auto  naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center naxatw-py-6 naxatw-font-primary lg:naxatw-w-[60%]">
           <div className="text_container ">
             <div className="title naxatw-py-8 ">
-              <h1 className="naxatw-ml-5">
+              <h1 className="naxatw-ml-0 lg:naxatw-ml-5">
                 Interactive digital portal of projects in Karnali Province of
                 Nepal
               </h1>
             </div>
             <div className="desc naxatw-text-[0.85rem]">
-              <p className="naxatw-ml-5 naxatw-font-primary naxatw-text-base naxatw-font-normal">
+              <p className="naxatw-ml-0 naxatw-font-primary naxatw-text-base naxatw-font-normal lg:naxatw-ml-5">
                 A digital portal to identify the enabling factors of the
                 development supported by development partners in Karnali
                 Province of Nepal
@@ -73,9 +73,9 @@ function Banner() {
           </div>
         </div>
         {/* image content starts here */}
-        <div className="image_content naxatw-flex naxatw-h-[500px] naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center naxatw-rounded-3xl  lg:naxatw-w-[40%]">
+        <div className="image_content naxatw-flex naxatw-h-[350px] naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center naxatw-rounded-3xl lg:naxatw-h-[500px]  lg:naxatw-w-[40%]">
           <img
-            className=" naxatw-h-full naxatw-w-[95%] naxatw-rounded-3xl naxatw-object-cover"
+            className=" naxatw-h-full naxatw-w-full naxatw-rounded-3xl naxatw-object-cover"
             src={laptop_image}
             alt=""
           />
