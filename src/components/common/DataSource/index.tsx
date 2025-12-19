@@ -6,7 +6,7 @@ function DataSource() {
     <div className="container naxatw-bg-light-blue naxatw-mx-8 naxatw-mb-5 naxatw-w-auto naxatw-rounded-2xl naxatw-px-5 naxatw-py-5 md:naxatw-mx-14 lg:naxatw-mx-32 lg:naxatw-mb-10 lg:naxatw-py-10">
       {/* top content starts here */}
       <div className="top_content naxatw-mb-3 naxatw-flex naxatw-justify-center lg:naxatw-mb-10">
-        <div className="naxatw-flex naxatw-h-[120px] naxatw-w-[692px] naxatw-flex-col naxatw-gap-y-5 lg:naxatw-h-[192px] lg:naxatw-gap-y-10">
+        <div className="naxatw-flex naxatw-h-auto naxatw-w-[692px] naxatw-flex-col naxatw-gap-y-5 lg:naxatw-h-[192px] lg:naxatw-gap-y-10">
           <h1 className="naxatw-text-center naxatw-text-grey-900">
             Data Source
           </h1>
@@ -67,7 +67,7 @@ function DataSource() {
                 Provincial Government
               </p>
             </div>
-            <div className="finance naxatw-flex naxatw-flex-wrap naxatw-justify-between naxatw-gap-y-5 lg:naxatw-flex-nowrap lg:naxatw-gap-x-5">
+            <div className="finance naxatw-flex naxatw-flex-wrap naxatw-justify-between naxatw-gap-y-5  lg:naxatw-gap-x-5">
               <Card
                 image={emblem}
                 government="कर्णाली प्रदेश सरकार"
