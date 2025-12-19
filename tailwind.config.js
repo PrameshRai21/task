@@ -57,6 +57,9 @@ module.exports = {
           900: '#212121',
         },
         'light-grey': '#fff3f2',
+        'light-blue': '#DCF1FE',
+        'light-red': '#FF4538',
+        dark: '#000000',
       },
 
       fontSize: {

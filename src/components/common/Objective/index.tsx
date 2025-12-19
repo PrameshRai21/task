@@ -16,7 +16,7 @@ function Objective() {
               development supported by development partners in Karnali Province
               of Nepal
             </h2>
-            <p className="naxatw-font-primary naxatw-text-lg naxatw-leading-6 naxatw-text-grey-900 ">
+            <p className="naxatw-font-primary naxatw-text-lg naxatw-leading-6 naxatw-text-grey-900 lg:naxatw-pr-5">
               In the last few years, there has been a huge concern among the
               civil societies, government and international development partners
               about improving the quality of the life of people of Karnali.
