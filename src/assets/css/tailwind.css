@@ -11,16 +11,16 @@
     @apply naxatw-text-grey-800;
   }
   h1 {
-    @apply naxatw-text naxatw-text-[2rem] naxatw-font-bold naxatw-leading-[3rem] lg:naxatw-text-[3rem] lg:naxatw-leading-[3.5rem];
+    @apply naxatw-text naxatw-text-3xl naxatw-font-bold naxatw-leading-[3rem] lg:naxatw-text-[3rem] lg:naxatw-leading-[3.5rem];
   }
   h2 {
-    @apply naxatw-text naxatw-text-[2.375rem] naxatw-font-normal naxatw-leading-[2.5rem];
+    @apply naxatw-text naxatw-text-2xl naxatw-font-normal naxatw-leading-[2.5rem] md:naxatw-text-[2rem];
   }
   h3 {
-    @apply naxatw-text naxatw-text-[1.35rem] naxatw-font-bold lg:naxatw-text-[1.625rem] lg:naxatw-leading-[1.5rem];
+    @apply naxatw-text naxatw-text-[1.25rem] naxatw-font-semibold lg:naxatw-text-[1.625rem] lg:naxatw-leading-[1.5rem];
   }
   h4 {
-    @apply naxatw-text naxatw-text-[1rem] naxatw-font-bold naxatw-leading-[1rem] lg:naxatw-text-[1.25rem] lg:naxatw-leading-[1.25rem];
+    @apply naxatw-text naxatw-text-sm naxatw-font-bold naxatw-leading-[1rem] lg:naxatw-text-[1.25rem] lg:naxatw-leading-[1.25rem];
   }
   h5 {
     @apply naxatw-text naxatw-text-[1.063rem] naxatw-font-bold naxatw-leading-[1.20];

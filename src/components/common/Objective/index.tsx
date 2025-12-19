@@ -10,7 +10,7 @@ function Objective() {
       {/* top content starts here */}
       <div className="top_content naxatw-flex naxatw-flex-col lg:naxatw-flex-row">
         <div className="text_content naxatw-flex naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center  lg:naxatw-w-[60%] ">
-          <div className="naxatw-flex naxatw-flex-col naxatw-gap-y-5">
+          <div className="naxatw-flex naxatw-flex-col naxatw-gap-y-2 md:naxatw-gap-y-5">
             <h2 className="naxatw-my-3 naxatw-font-primary  naxatw-text-grey-900">
               This portal developed to identify the enabling factors of the
               development supported by development partners in Karnali Province
