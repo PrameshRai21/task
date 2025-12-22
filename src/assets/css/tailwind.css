@@ -17,7 +17,7 @@
     @apply naxatw-text naxatw-text-2xl naxatw-font-normal naxatw-leading-[2.5rem] md:naxatw-text-[2rem];
   }
   h3 {
-    @apply naxatw-text naxatw-text-[1.25rem] naxatw-font-semibold lg:naxatw-text-[1.625rem] lg:naxatw-leading-[1.5rem];
+    @apply naxatw-text naxatw-text-[1.25rem] naxatw-font-semibold md:naxatw-text-[1.625rem] naxatw-leading-[30px];
   }
   h4 {
     @apply naxatw-text naxatw-text-sm naxatw-font-bold naxatw-leading-[1rem] lg:naxatw-text-[1.25rem] lg:naxatw-leading-[1.25rem];
