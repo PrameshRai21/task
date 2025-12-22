@@ -23,7 +23,7 @@ function Explore() {
         </div>
         {/* button section starts here */}
         <div className="btn_container naxatw-flex naxatw-flex-col naxatw-items-start naxatw-justify-center">
-          <button className="naxatw-flex naxatw-min-w-[160px] naxatw-gap-x-1 naxatw-rounded-lg naxatw-bg-white naxatw-px-2 naxatw-py-3 naxatw-font-primary naxatw-text-base naxatw-font-bold naxatw-leading-6 naxatw-text-primary-700 hover:naxatw-border hover:naxatw-border-white hover:naxatw-bg-primary-700 hover:naxatw-text-white active:naxatw-border active:naxatw-border-white active:naxatw-bg-primary-700 active:naxatw-text-white">
+          <button className="naxatw-flex naxatw-min-w-[160px] naxatw-justify-center naxatw-gap-x-1 naxatw-rounded-lg naxatw-bg-white naxatw-px-2 naxatw-py-3 naxatw-font-primary naxatw-text-base naxatw-font-bold naxatw-leading-6 naxatw-text-primary-700 hover:naxatw-border hover:naxatw-border-white hover:naxatw-bg-primary-700 hover:naxatw-text-white active:naxatw-border active:naxatw-border-white active:naxatw-bg-primary-700 active:naxatw-text-white">
             <Map className="naxatw-text-2xl" /> Explore Map
           </button>
         </div>

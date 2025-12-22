@@ -10,16 +10,18 @@ interface CardProps {
 function Card({ image, government, depart, office, styleCSS }: CardProps) {
   return (
     <div
-      className={`naxatw-flex naxatw-max-w-[350px] naxatw-gap-3  ${styleCSS}`}
+      className={`naxatw-flex  naxatw-max-w-[350px] naxatw-gap-3  ${styleCSS}`}
     >
-      <div className="naxatw-flex naxatw-w-[44px]  naxatw-items-center naxatw-justify-center">
-        <img className="naxatw-h-[36.85px] naxatw-w-full" src={image} alt="" />
+      <div className="naxatw-flex naxatw-h-auto naxatw-items-center naxatw-justify-center">
+        <div className="naxatw-flex naxatw-h-[36.85px] naxatw-w-[44px]   naxatw-items-center naxatw-justify-center  ">
+          <img className=" naxatw-object-contain" src={image} alt="" />
+        </div>
       </div>
-      <div className="naxatw-text-dark naxatw-flex naxatw-w-[85%] naxatw-flex-col naxatw-justify-center">
-        <p className="naxatw-text-xs naxatw-font-black naxatw-leading-4">
+      <div className="naxatw-flex  naxatw-flex-col naxatw-justify-center naxatw-text-dark">
+        <p className=" naxatw-text-xs naxatw-font-extrabold naxatw-leading-4">
           {government}
         </p>
-        <p className="naxatw-text-md  naxatw-font-black naxatw-leading-5">
+        <p className="naxatw-text-md naxatw-font-black  naxatw-leading-5">
           {depart}
         </p>
         <p className=" naxatw-text-md naxatw-font-black naxatw-leading-5">

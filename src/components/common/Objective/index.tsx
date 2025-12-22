@@ -42,7 +42,7 @@ function Objective() {
         </div>
       </div>
       {/* bottom content starts here */}
-      <div className="bottom_content naxatw-my-3 lg:naxatw-my-5">
+      <div className="bottom_content naxatw-my-3 naxatw-flex naxatw-flex-col naxatw-gap-8 lg:naxatw-my-5">
         <div className="title ">
           <h3 className=" naxatw-font-primary naxatw-text-grey-900">
             Objective

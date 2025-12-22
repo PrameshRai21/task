@@ -13,7 +13,7 @@ function Footer() {
           {/* first section starts here */}
           <div className="first_section naxatw-flex naxatw-w-full naxatw-gap-x-5 lg:naxatw-w-[50%]">
             {/* first container */}
-            <div className="first_container naxatw-flex naxatw-h-11 naxatw-gap-x-3">
+            <div className="first_container naxatw-mb-6 naxatw-flex naxatw-h-11 naxatw-gap-x-3">
               <div className="ministry_container naxatw-flex naxatw-justify-start naxatw-gap-3 naxatw-border-r-2 naxatw-border-grey-400 naxatw-pr-3">
                 <div className="naxatw-flex naxatw-items-start naxatw-justify-center ">
                   <img
