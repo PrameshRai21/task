@@ -22,17 +22,17 @@ function Footer() {
                     alt=""
                   />
                 </div>
-                <div className="naxatw-text-maroon naxatw-flex naxatw-flex-col naxatw-justify-start">
-                  <p className="naxatw-text-sm naxatw-font-extrabold naxatw-leading-5">
+                <div className="naxatw-flex naxatw-flex-col naxatw-justify-start naxatw-text-maroon">
+                  <p className="naxatw-font-devnagari naxatw-text-sm naxatw-font-extrabold naxatw-leading-5">
                     कर्णाली प्रदेश सरकार
                   </p>
-                  <p className="naxatw-text-lg naxatw-font-extrabold naxatw-leading-5">
+                  <p className="naxatw-font-devnagari naxatw-text-lg naxatw-font-extrabold naxatw-leading-5">
                     मुख्यमन्त्री तथा मन्त्रिपरिषद्को कार्यालय
                   </p>
                 </div>
               </div>
               <div className="text_container naxatw-flex naxatw-flex-col  naxatw-justify-start">
-                <p className="naxatw-from-light-red naxatw-inline-block naxatw-bg-gradient-to-r  naxatw-to-primary-700 naxatw-bg-clip-text naxatw-text-xl naxatw-font-[1000] naxatw-uppercase naxatw-italic naxatw-text-transparent ">
+                <p className="naxatw-inline-block naxatw-bg-gradient-to-r naxatw-from-light-red  naxatw-to-primary-700 naxatw-bg-clip-text naxatw-text-xl naxatw-font-[1000] naxatw-uppercase naxatw-italic naxatw-text-transparent ">
                   Project
                 </p>
                 <p className="naxatw-font-comfortaa naxatw-text-[0.85rem]">

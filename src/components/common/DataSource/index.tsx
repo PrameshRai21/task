@@ -2,6 +2,53 @@ import emblem from '../../../assets/images/emblem.png';
 import Card from '../Cards/Card';
 
 function DataSource() {
+  const firstFedGovData = [
+    {
+      title: 'नेपाल सरकार',
+      subTitle: 'अर्थ मन्त्रालय',
+      style: 'naxatw-w-[142px] naxatw-h-[36.85px]  ',
+    },
+    {
+      title: 'Nepal Government',
+      subTitle: 'Line Ministry Budget Information System',
+      style: ' naxatw-w-auto naxatw-h-[36.85px]',
+    },
+  ];
+  const secondFedGovData = [
+    {
+      title: 'Government of Nepal',
+      subTitle: 'Aid Management System for Nepal',
+      office: '',
+      style: ' naxatw-h-[36.85px]',
+    },
+    {
+      title: 'नेपाल सरकार',
+      subTitle: 'अर्थ मन्त्रालय',
+      office: 'महालेखा नियन्त्रक कार्यालय',
+      style: ' naxatw-h-[36.85px] ',
+    },
+  ];
+
+  const provGovData = [
+    {
+      title: 'कर्णाली प्रदेश सरकार',
+      subTitle: '',
+      office: 'मुख्यमन्त्री तथा मन्त्रिपरिषद्को कार्यालय',
+      style: '',
+    },
+    {
+      title: 'Province Government',
+      subTitle: 'Provincial Line Ministry Budget Information System',
+      office: '',
+      style: ' ',
+    },
+    {
+      title: 'नेपाल सरकार',
+      subTitle: 'अर्थ मन्त्रालय',
+      office: 'महालेखा नियन्त्रक कार्यालय',
+      style: '',
+    },
+  ];
   return (
     <div className="container naxatw-mx-8 naxatw-mb-5 naxatw-w-auto naxatw-rounded-2xl naxatw-bg-light-blue naxatw-px-5 naxatw-py-5 md:naxatw-mx-14 lg:naxatw-mx-32 lg:naxatw-mb-10 lg:naxatw-py-10">
       {/* top content starts here */}
@@ -18,10 +65,10 @@ function DataSource() {
       </div>
       {/* bottom content starts here */}
       <div className="bottom_content naxatw-my-4 naxatw-flex naxatw-flex-col naxatw-gap-y-5 lg:naxatw-gap-y-10">
-        {/* federal gov content starts here */}
-        <div className="federal naxatw-flex naxatw-justify-center naxatw-py-2">
-          <div className="naxatw-h-137px naxatw-w-[629px]">
-            <div className="federal_content naxatw-flex naxatw-flex-col naxatw-gap-y-5 ">
+        <div className="all_content naxatw-items-starts naxatw-flex naxatw-flex-col naxatw-justify-start naxatw-gap-y-10 naxatw-py-2 lg:naxatw-items-center lg:naxatw-justify-center lg:naxatw-gap-y-20">
+          {/* federal gov content starts here */}
+          <div className="federal_content naxatw-h-137px  lg:naxatw-w-[700px]">
+            <div className="federal_content naxatw-flex naxatw-flex-col  naxatw-gap-y-6  ">
               <div className="title">
                 <p className="naxatw-text-center naxatw-font-primary naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-4 naxatw-tracking-[1px] naxatw-text-light-red">
                   Federal Government
@@ -29,80 +76,72 @@ function DataSource() {
               </div>
               <div className="naxatw-flex naxatw-flex-col naxatw-gap-y-5">
                 <div className="first_row naxatw-my-3 ">
-                  <div className="finance naxatw-flex naxatw-flex-col naxatw-items-start  naxatw-gap-5 md:naxatw-flex-row md:naxatw-gap-16">
-                    <Card
-                      image={emblem}
-                      government="नेपाल सरकार"
-                      depart="अर्थ मन्त्रालय"
-                    />
-                    <Card
-                      image={emblem}
-                      government="Nepal Government"
-                      depart="Line Ministry Budget Information System"
-                    />
+                  <div className="finance naxatw-flex naxatw-flex-col naxatw-items-start  naxatw-justify-center naxatw-gap-5 md:naxatw-flex-row md:naxatw-gap-16">
+                    {firstFedGovData.map(data => (
+                      <Card
+                        key={data.title}
+                        image={emblem}
+                        government={data.title}
+                        depart={data.subTitle}
+                        styleCSS={data.style}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
               <div className="second_row naxatw-gap-3 ">
                 <div className="finance naxatw-flex naxatw-flex-col naxatw-items-start naxatw-gap-5  md:naxatw-flex-row md:naxatw-gap-16">
-                  <Card
-                    image={emblem}
-                    government="Government of Nepal"
-                    depart="Aid Management System for Nepal"
-                  />
-                  <Card
-                    image={emblem}
-                    government="नेपाल सरकार"
-                    depart="अर्थ मन्त्रालय"
-                    office="महालेखा नियन्त्रक कार्यालय"
-                  />
+                  {secondFedGovData.map(data => (
+                    <Card
+                      key={data.title}
+                      image={emblem}
+                      government={data.title}
+                      depart={data.subTitle}
+                      office={data.office}
+                      styleCSS={data.style}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        {/* provincial gov content starts here */}
-        <div className="provincial_content naxatw-flex naxatw-justify-center">
-          <div className=" naxatw-mb-5 naxatw-flex naxatw-flex-col naxatw-gap-3 lg:naxatw-w-[985px] lg:naxatw-gap-y-5">
+          {/* provincial gov content starts here */}
+          <div className="provincial_content naxatw-flex naxatw-justify-center">
+            <div className=" naxatw-mb-5naxatw-w-auto naxatw-flex naxatw-flex-col naxatw-gap-3 lg:naxatw-gap-y-5 xl:naxatw-w-[1200px]">
+              <div className="title">
+                <p className="naxatw-text-center naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-5 naxatw-tracking-[1px] naxatw-text-red-500 lg:naxatw-leading-8">
+                  Provincial Government
+                </p>
+              </div>
+              <div className="finance naxatw-flex naxatw-flex-wrap naxatw-justify-between naxatw-gap-y-5 lg:naxatw-flex-nowrap  lg:naxatw-gap-x-5">
+                {provGovData.map(data => (
+                  <Card
+                    key={data.title}
+                    image={emblem}
+                    government={data.title}
+                    depart={data.subTitle}
+                    office={data.office}
+                    styleCSS={data.style}
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+          {/* municipal content starts here */}
+          <div className="municipal_content naxatw-mb-5">
             <div className="title">
-              <p className="naxatw-text-center naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-4 naxatw-tracking-[1px] naxatw-text-red-500">
-                Provincial Government
+              <p className="naxatw-text-center naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-5 naxatw-tracking-[1px] naxatw-text-red-500">
+                Municipal Government
               </p>
             </div>
-            <div className="finance naxatw-flex naxatw-flex-wrap naxatw-justify-between naxatw-gap-y-5  lg:naxatw-gap-x-5">
-              <Card
-                image={emblem}
-                government="कर्णाली प्रदेश सरकार"
-                depart="मुख्यमन्त्री तथा मन्त्रिपरिषद्को कार्यालय"
-              />
-              <Card
-                image={emblem}
-                government="Province Government"
-                depart="Provincial Line Ministry Budget Information System"
-              />
-              <Card
-                image={emblem}
-                government="नेपाल सरकार"
-                depart="अर्थ मन्त्रालय"
-                office="महालेखा नियन्त्रक कार्यालय"
-              />
-            </div>
-          </div>
-        </div>
-        {/* municipal content starts here */}
-        <div className="municipal_content naxatw-mb-5">
-          <div className="title">
-            <p className="naxatw-text-center naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-4 naxatw-tracking-[1px] naxatw-text-red-500">
-              Municipal Government
-            </p>
-          </div>
-          <div className="first_row naxatw-my-5">
-            <div className="finance naxatw-flex naxatw-items-start naxatw-gap-20 md:naxatw-items-center md:naxatw-justify-center">
-              <Card
-                image={emblem}
-                government="नेपाल सरकार"
-                depart="स्थानीय सञ्चित कोष प्रणाली"
-              />
+            <div className="first_row naxatw-my-5">
+              <div className="finance naxatw-flex naxatw-items-start naxatw-gap-20 md:naxatw-items-center md:naxatw-justify-center">
+                <Card
+                  image={emblem}
+                  government="नेपाल सरकार"
+                  office="स्थानीय सञ्चित कोष प्रणाली"
+                />
+              </div>
             </div>
           </div>
         </div>
