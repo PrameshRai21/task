@@ -23,7 +23,7 @@ function Footer() {
                   />
                 </div>
                 <div className="naxatw-flex naxatw-flex-col naxatw-justify-start naxatw-text-maroon">
-                  <p className="naxatw-font-devnagari naxatw-text-sm naxatw-font-extrabold naxatw-leading-5">
+                  <p className="naxatw-font-devngari naxatw-text-sm naxatw-font-extrabold naxatw-leading-5">
                     कर्णाली प्रदेश सरकार
                   </p>
                   <p className="naxatw-font-devnagari naxatw-text-lg naxatw-font-extrabold naxatw-leading-5">

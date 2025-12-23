@@ -5,13 +5,15 @@ function DataSource() {
   const firstFedGovData = [
     {
       title: 'नेपाल सरकार',
-      subTitle: 'अर्थ मन्त्रालय',
-      style: 'naxatw-w-[142px] naxatw-h-[36.85px]  ',
+      subTitle: '',
+      office: 'अर्थ मन्त्रालय',
+      style: 'naxatw-w-[180px]',
     },
     {
       title: 'Nepal Government',
       subTitle: 'Line Ministry Budget Information System',
-      style: ' naxatw-w-auto naxatw-h-[36.85px]',
+      office: '',
+      style: ' naxatw-w-auto ',
     },
   ];
   const secondFedGovData = [
@@ -19,13 +21,13 @@ function DataSource() {
       title: 'Government of Nepal',
       subTitle: 'Aid Management System for Nepal',
       office: '',
-      style: ' naxatw-h-[36.85px]',
+      style: ' ',
     },
     {
       title: 'नेपाल सरकार',
       subTitle: 'अर्थ मन्त्रालय',
       office: 'महालेखा नियन्त्रक कार्यालय',
-      style: ' naxatw-h-[36.85px] ',
+      style: ' ',
     },
   ];
 
@@ -40,7 +42,7 @@ function DataSource() {
       title: 'Province Government',
       subTitle: 'Provincial Line Ministry Budget Information System',
       office: '',
-      style: ' ',
+      style: '',
     },
     {
       title: 'नेपाल सरकार',
@@ -65,10 +67,10 @@ function DataSource() {
       </div>
       {/* bottom content starts here */}
       <div className="bottom_content naxatw-my-4 naxatw-flex naxatw-flex-col naxatw-gap-y-5 lg:naxatw-gap-y-10">
-        <div className="all_content naxatw-items-starts naxatw-flex naxatw-flex-col naxatw-justify-start naxatw-gap-y-10 naxatw-py-2 lg:naxatw-items-center lg:naxatw-justify-center lg:naxatw-gap-y-20">
+        <div className="all_content naxatw-items-starts lg:naxatw-gap-y-26 naxatw-flex naxatw-flex-col naxatw-justify-start naxatw-gap-y-10 naxatw-py-2 lg:naxatw-items-center lg:naxatw-justify-center">
           {/* federal gov content starts here */}
-          <div className="federal_content naxatw-h-137px  lg:naxatw-w-[700px]">
-            <div className="federal_content naxatw-flex naxatw-flex-col  naxatw-gap-y-6  ">
+          <div className="fed_container naxatw-h-auto  lg:naxatw-w-[700px]">
+            <div className="federal_content naxatw-flex naxatw-flex-col naxatw-items-center naxatw-justify-center naxatw-gap-y-5  ">
               <div className="title">
                 <p className="naxatw-text-center naxatw-font-primary naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-4 naxatw-tracking-[1px] naxatw-text-light-red">
                   Federal Government
@@ -83,14 +85,15 @@ function DataSource() {
                         image={emblem}
                         government={data.title}
                         depart={data.subTitle}
+                        office={data.office}
                         styleCSS={data.style}
                       />
                     ))}
                   </div>
                 </div>
               </div>
-              <div className="second_row naxatw-gap-3 ">
-                <div className="finance naxatw-flex naxatw-flex-col naxatw-items-start naxatw-gap-5  md:naxatw-flex-row md:naxatw-gap-16">
+              <div className="second_row  ">
+                <div className="finance naxatw-flex naxatw-flex-col naxatw-items-start naxatw-gap-y-5  md:naxatw-flex-row md:naxatw-gap-16">
                   {secondFedGovData.map(data => (
                     <Card
                       key={data.title}
@@ -106,8 +109,8 @@ function DataSource() {
             </div>
           </div>
           {/* provincial gov content starts here */}
-          <div className="provincial_content naxatw-flex naxatw-justify-center">
-            <div className=" naxatw-mb-5naxatw-w-auto naxatw-flex naxatw-flex-col naxatw-gap-3 lg:naxatw-gap-y-5 xl:naxatw-w-[1200px]">
+          <div className="provincial_content naxatw-flex naxatw-items-center naxatw-justify-center">
+            <div className=" naxatw-mb-5naxatw-w-auto naxatw-flex naxatw-flex-col naxatw-gap-1 lg:naxatw-gap-y-3 xl:naxatw-w-[950px]">
               <div className="title">
                 <p className="naxatw-text-center naxatw-text-xs naxatw-font-bold naxatw-uppercase naxatw-leading-5 naxatw-tracking-[1px] naxatw-text-red-500 lg:naxatw-leading-8">
                   Provincial Government

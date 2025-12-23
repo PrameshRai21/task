@@ -6,10 +6,12 @@ import {
 } from '@reduxjs/toolkit';
 import common, { CommonState } from '../slices/common';
 import loader, { LoaderState } from '../slices/loader';
+import weather, {WeatherInterface} from './weatherReducer'
 
 export interface IRootReducer {
   common: CommonState;
   loader: LoaderState;
+  weather: WeatherInterface;
 }
 
 const rootReducer: Reducer<
@@ -18,6 +20,7 @@ const rootReducer: Reducer<
 > = combineReducers({
   common,
   loader,
+  weather,
 });
 
 export default rootReducer;
