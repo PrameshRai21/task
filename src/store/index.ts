@@ -2,7 +2,9 @@ import { configureStore } from '@reduxjs/toolkit';
 import createSagaMiddleware from 'redux-saga';
 import { persistStore } from 'redux-persist';
 import rootReducer from './reducers';
+import weatherReducer from './reducers/weatherReducer'
 import rootSaga from './sagas';
+
 
 const sagaMiddleware = createSagaMiddleware();
 const middleware = [sagaMiddleware];
