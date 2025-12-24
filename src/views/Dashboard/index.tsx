@@ -1,19 +1,17 @@
-import Banner from '@Components/common/Banner';
-import DataSource from '@Components/common/DataSource';
-import Explore from '@Components/common/Explore';
-import Footer from '@Components/common/Footer';
-import Objective from '@Components/common/Objective';
+import Banner from '@Components/web_layout/Banner';
+import DataSource from '@Components/web_layout/DataSource';
+import Explore from '@Components/web_layout/Explore';
+import Footer from '@Components/web_layout/Footer';
+import Objective from '@Components/web_layout/Objective';
 
 export default function Dashboard() {
   return (
-    <div>
-      <div>
-        <Banner />
-        <Objective />
-        <DataSource />
-        <Explore />
-        <Footer />
-      </div>
-    </div>
+    <>
+      <Banner />
+      <Objective />
+      <DataSource />
+      <Explore />
+      <Footer />
+    </>
   );
 }
