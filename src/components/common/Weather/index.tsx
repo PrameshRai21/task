@@ -26,21 +26,23 @@ function WeatherComponent() {
   };
 
   return (
-    <div className="container">
-      <div className="form-container">
-        <input
-          type="text"
-          value={city}
-          placeholder="Enter City..."
-          onChange={e => setCity(e.target.value)}
-        />
-        <button type="submit" onClick={handleClick}>
-          Get
-        </button>
-      </div>
-      <div className="success_error">
-        {loading && <p>Loading...</p>}
-        {error && <p>Error...</p>}
+    <div className="container naxatw-grid naxatw-h-full naxatw-w-full">
+      <div className="main naxatw-h-full naxatw-w-[90%]  naxatw-bg-primary-800">
+        <div className="form-container naxatw-bg-red-400">
+          <input
+            type="text"
+            value={city}
+            placeholder="Enter City..."
+            onChange={e => setCity(e.target.value)}
+          />
+          <button type="submit" onClick={handleClick}>
+            Get
+          </button>
+        </div>
+        <div className="success_error">
+          {loading && <p>Loading...</p>}
+          {error && <p>Error...</p>}
+        </div>
       </div>
     </div>
   );

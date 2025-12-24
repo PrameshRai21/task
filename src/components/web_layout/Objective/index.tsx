@@ -2,11 +2,11 @@ import karnali_img from '../../../assets/images/chisapani.jpg';
 import freelancer from '../../../assets/images/freelancer.png';
 import data_collection from '../../../assets/images/data-collection.png';
 import workshop from '../../../assets/images/workshop.png';
-import ContentCard from '../Cards/ContentCard';
+import ContentCard from '../../common/Cards/ContentCard';
 
 function Objective() {
   return (
-    <div className="container naxatw-mx-5 naxatw-mb-5 naxatw-rounded-xl naxatw-bg-light-grey naxatw-p-8 lg:naxatw-mx-10 lg:naxatw-mb-10 lg:naxatw-p-14">
+    <div className="container naxatw-mx-5 naxatw-mb-5 naxatw-rounded-xl naxatw-bg-light-grey naxatw-p-5 md:naxatw-p-10 lg:naxatw-mx-10 lg:naxatw-mb-10">
       {/* top content starts here */}
       <div className="top_content naxatw-flex naxatw-flex-col lg:naxatw-flex-row">
         <div className="text_content naxatw-flex naxatw-w-full naxatw-flex-col naxatw-items-center naxatw-justify-center  lg:naxatw-w-[60%] ">
@@ -16,7 +16,7 @@ function Objective() {
               development supported by development partners in Karnali Province
               of Nepal
             </h2>
-            <p className="naxatw-font-primary naxatw-text-lg naxatw-leading-6 naxatw-text-grey-900 lg:naxatw-pr-5">
+            <p className="naxatw-font-primary  naxatw-text-base naxatw-leading-6 naxatw-text-grey-900 lg:naxatw-pr-5 lg:naxatw-text-lg">
               In the last few years, there has been a huge concern among the
               civil societies, government and international development partners
               about improving the quality of the life of people of Karnali.
@@ -33,22 +33,18 @@ function Objective() {
           </div>
         </div>
         {/* image content starts here */}
-        <div className="image_content min-h-96 naxatw-mb-10 naxatw-mt-5 naxatw-h-[350px] naxatw-w-full lg:naxatw-h-[540px] lg:naxatw-w-[488px]">
+        <div className="image_content min-h-96 naxatw-mb-4 naxatw-mt-5 naxatw-h-[200px] naxatw-w-full md:naxatw-h-[300px] lg:naxatw-mb-10 lg:naxatw-h-[540px] lg:naxatw-w-[488px]">
           <img
-            className="naxatw-h-full naxatw-w-full naxatw-rounded-3xl "
+            className="naxatw-h-full naxatw-w-full naxatw-rounded-2xl naxatw-object-cover "
             src={karnali_img}
             alt=""
           />
         </div>
       </div>
       {/* bottom content starts here */}
-      <div className="bottom_content naxatw-my-3 naxatw-flex naxatw-flex-col naxatw-gap-8 lg:naxatw-my-5">
-        <div className="title ">
-          <h3 className=" naxatw-font-primary naxatw-text-grey-900">
-            Objective
-          </h3>
-        </div>
-        <div className="obj_content naxatw-flex naxatw-flex-col naxatw-justify-between naxatw-gap-10 lg:naxatw-flex-row">
+      <div className="bottom_content naxatw-my-3 naxatw-flex naxatw-flex-col naxatw-gap-5 lg:naxatw-gap-8 lg:naxatw-my-5">
+        <h3 className=" naxatw-font-primary naxatw-text-grey-900">Objective</h3>
+        <div className="obj_content naxatw-flex naxatw-flex-col naxatw-justify-between naxatw-gap-5 lg:naxatw-flex-row lg:naxatw-gap-10">
           <ContentCard
             image={freelancer}
             alt="freelancer.png"
