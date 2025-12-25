@@ -34,5 +34,4 @@ const weatherSlice = createSlice({
 })
 
 export const {fetchApiFailure, fetchApiRequest, fetchApiSuccess} = weatherSlice.actions;
-export {weatherSlice}
 export default persist('weather', [], weatherSlice.reducer);

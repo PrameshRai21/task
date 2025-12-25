@@ -7,7 +7,6 @@ import { Sunset } from 'lucide-react';
 
 function WeatherComponent() {
   const [city, setCity] = useState<string>('');
-  const [newCity, setNewCity] = useState<string>('');
   const dispatch = useDispatch();
   const { data, loading, error } = useSelector(
     (state: RootState) => state.weather,
@@ -18,10 +17,7 @@ function WeatherComponent() {
 
   const handleClick = () => {
     if (!city) return;
-
-    if (city) {
-      dispatch(fetchApiRequest(city));
-    }
+    dispatch(fetchApiRequest(city));
     setCity('');
   };
 
@@ -52,8 +48,8 @@ function WeatherComponent() {
             </p>
           )}
           {error && (
-            <p className="naxatw-text-center naxatw-text-xl naxatw-font-semibold  naxatw-text-light-red">
-              Error...
+            <p className="naxatw-text-center naxatw-text-lg naxatw-font-semibold  naxatw-text-light-red">
+              Error : Enter proper city name!
             </p>
           )}
         </div>
