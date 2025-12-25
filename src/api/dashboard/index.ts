@@ -18,6 +18,14 @@ export const getWeatherApi = (city: string) => {
   })
 } 
 
+// function fetching users data
+export const userDataApi = axios.create({
+  baseURL: 'https://jsonplaceholder.typicode.com/',
+  headers : {
+    'Content-Type': 'application/json'
+  }
+})
+
 export const useGetServicesQuery = () => {
   return useQuery({
     queryKey: ['get-services'],
