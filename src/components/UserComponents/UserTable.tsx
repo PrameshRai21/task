@@ -1,9 +1,12 @@
-import { useFetchUserData } from '../../hooks/userHooks/useFetchUserApi';
+import { useFetchUserData } from '@Hooks/userHooks/useFetchUserApi';
+import { useDeleteUser } from '@Hooks/userHooks/useUserMutation';
 import { Pen } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
 
 function UserTable() {
-  const { data } = useFetchUserData();
+  const { isLoading, data, isError } = useFetchUserData();
+  const { mutate: deleteUser } = useDeleteUser();
+
   return (
     <div className=" naxatw-mx-3 naxatw-font-primary">
       <div className="naxatw-my-4">
@@ -160,7 +163,10 @@ function UserTable() {
                     <button className="naxatw-rounded-md naxatw-border naxatw-p-1 naxatw-text-green-700 hover:naxatw-border hover:naxatw-border-green-700">
                       <Pen />
                     </button>
-                    <button className="naxatw-rounded-md naxatw-border naxatw-p-1 naxatw-text-red-700 hover:naxatw-border hover:naxatw-border-red-700">
+                    <button
+                      onClick={e => deleteUser(user.id)}
+                      className="naxatw-rounded-md naxatw-border naxatw-p-1 naxatw-text-red-700 hover:naxatw-border hover:naxatw-border-red-700"
+                    >
                       <Trash2 />
                     </button>
                   </td>

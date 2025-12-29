@@ -13,5 +13,10 @@ export const createUser = async (user: UserData) => {
     return response.data;
 }
 
+//delete user
+export const deleteUser = async (id: number) => {
+    await userDataApi.delete(`/users/${id}`)
+}
+
 
 
