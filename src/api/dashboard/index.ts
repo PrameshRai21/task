@@ -26,7 +26,6 @@ export const userDataApi = axios.create({
   }
 })
 
-
 export const useGetServicesQuery = () => {
   return useQuery({
     queryKey: ['get-services'],
