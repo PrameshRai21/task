@@ -1,7 +1,6 @@
 import { useFetchUserData } from '@Hooks/userHooks/useFetchUserApi';
 import { useDeleteUser } from '@Hooks/userHooks/useUserMutation';
-import { Pen } from 'lucide-react';
-import { Trash2 } from 'lucide-react';
+import { Pen, Trash2 } from 'lucide-react';
 
 function UserTable() {
   const { isLoading, data, isError } = useFetchUserData();
