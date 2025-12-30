@@ -1,3 +1,4 @@
+import AreaCharts from '@Components/RechartsComponents/AreaChart';
 import BarCharts from '@Components/RechartsComponents/BarChart';
 import LineChartComp from '@Components/RechartsComponents/LineChart/LineChartComp';
 
@@ -6,6 +7,7 @@ function Charts() {
     <div>
       <LineChartComp />
       <BarCharts />
+      <AreaCharts />
     </div>
   );
 }
