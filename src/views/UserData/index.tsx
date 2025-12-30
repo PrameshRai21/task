@@ -4,7 +4,6 @@ import UserTable from '@Components/UserComponents/UserTable';
 function UserData() {
   return (
     <>
-      <UserForm />
       <UserTable />
     </>
   );
