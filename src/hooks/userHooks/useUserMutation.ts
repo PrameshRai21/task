@@ -26,7 +26,6 @@ export const useUpdateUser = () => {
   return useMutation<UserData, Error, UpdateUserData>({
     mutationFn: ({ id, data }) => updateUser(id, data),
     onSuccess: (updatedUser) => {
-      // Update cache so UI updates immediately
       queryClient.setQueryData<UserData[]>(["users"], (users) =>
         users?.map((user) =>
           user.id === updatedUser.id ? updatedUser : user
