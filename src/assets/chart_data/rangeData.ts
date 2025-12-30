@@ -1,4 +1,3 @@
-
 export const rangeData = [
   { day: '05-01', temperature: [-1, 10] },
   { day: '05-02', temperature: [2, 15] },

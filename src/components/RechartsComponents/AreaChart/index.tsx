@@ -22,16 +22,16 @@ function AreaCharts({ isAnimationActive = true }) {
           <AreaChart data={rangeData}>
             <CartesianGrid
               stroke="gray"
-              strokeDasharray={'5 5'}
-              strokeOpacity={'40%'}
+              strokeDasharray="5 5"
+              strokeOpacity="40%"
             />
             <Area
-              dataKey={'temperature'}
+              dataKey="temperature"
               stroke="#8884d8"
               fill="#8884d8"
               isAnimationActive={isAnimationActive}
             />
-            <XAxis dataKey={'day'} />
+            <XAxis dataKey="day" />
             <YAxis
               domain={['auto', 'auto']}
               label={{
