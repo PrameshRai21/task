@@ -24,3 +24,4 @@ export const deleteUser = async(id: number) => {
   await userDataApi.delete(`/users/${id}`)
 }
 
+
