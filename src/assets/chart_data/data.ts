@@ -12,4 +12,5 @@ export const data: ChartData[] = [
   { name: 'Page D', uv: 200, pv: 9800, amt: 2400 },
   { name: 'Page E', uv: 278, pv: 3908, amt: 2400 },
   { name: 'Page F', uv: 189, pv: 4800, amt: 2400 },
+  { name: 'Page G', uv: 250, pv: 4000, amt: 2400 },
 ];

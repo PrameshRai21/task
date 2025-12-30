@@ -15,8 +15,9 @@ export default function LineChartComp() {
     <div className="container naxatw-flex naxatw-h-screen naxatw-w-screen naxatw-items-center naxatw-justify-center">
       <div
         className="naxatw-bg-green-100"
-        style={{ width: '90%', maxWidth: 600, aspectRatio: '1.618' }}
+        style={{ width: '90%', maxWidth: 800, aspectRatio: '1.618' }}
       >
+        <h3 className="naxatw-text-center">Line Chart</h3>
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={data}>
             <CartesianGrid
