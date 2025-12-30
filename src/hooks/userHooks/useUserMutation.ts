@@ -1,6 +1,11 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { UserData } from "@Types/index";
-import { createUser } from "@Api/axios";
+import { createUser, deleteUser, updateUser } from "@Api/axios";
+
+type UpdateUserData = {
+  id: number;
+  data: UserData;
+};
 
 //create new user mutation hook
 export const useCreateUser = () => {
@@ -13,4 +18,33 @@ export const useCreateUser = () => {
             })
         }
     })
+}
+
+//edit user
+export const useUpdateUser = () => {
+  const queryClient = useQueryClient();
+  return useMutation<UserData, Error, UpdateUserData>({
+    mutationFn: ({ id, data }) => updateUser(id, data),
+    onSuccess: (updatedUser) => {
+      // Update cache so UI updates immediately
+      queryClient.setQueryData<UserData[]>(["users"], (users) =>
+        users?.map((user) =>
+          user.id === updatedUser.id ? updatedUser : user
+        )
+      );
+    },
+  });
+};
+
+// delete user
+export const useDeleteUser = () => {
+  const queryClient = useQueryClient()
+  return useMutation({
+    mutationFn:(userId: number) => deleteUser(userId),
+    onSuccess: (_data, userId) => {
+       queryClient.setQueryData(['users'], (users:any) => {
+        return users?.filter((user: any) => user.id !== userId) 
+      })
+    }
+  })
 }

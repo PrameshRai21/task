@@ -1,5 +1,5 @@
 import { fetchData } from "@Api/axios";
-import { UserData } from "@Types/index";
+
 import { useQuery } from "@tanstack/react-query";
 
 export const useFetchUserData = () => {
@@ -8,4 +8,4 @@ export const useFetchUserData = () => {
         queryFn: fetchData,
         staleTime: 10000,
     })
-
+}

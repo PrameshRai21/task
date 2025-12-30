@@ -13,5 +13,14 @@ export const createUser = async (user: UserData) => {
     return response.data;
 }
 
+//edit user
+export const updateUser = async (id:number, user: UserData): Promise<UserData> => {
+  const response = await userDataApi.put<UserData>(`/users/${id}`, user);
+  return response.data;
+};
 
+// delete user
+export const deleteUser = async(id: number) => {
+  await userDataApi.delete(`/users/${id}`)
+}
 
