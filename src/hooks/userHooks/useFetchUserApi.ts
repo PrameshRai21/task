@@ -1,5 +1,4 @@
 import { fetchData } from "@Api/axios";
-
 import { useQuery } from "@tanstack/react-query";
 
 export const useFetchUserData = () => {
