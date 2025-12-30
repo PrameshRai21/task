@@ -21,11 +21,11 @@ export default function LineChartComp() {
           <LineChart data={data}>
             <CartesianGrid
               stroke="gray"
-              strokeDasharray={'5 5'}
-              strokeOpacity={'80%'}
+              strokeDasharray="5 5"
+              strokeOpacity="80%"
             />
             <Line
-              type={'monotone'}
+              type="monotone"
               stroke="purple"
               strokeWidth={2}
               dataKey="uv"

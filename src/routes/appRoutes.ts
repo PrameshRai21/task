@@ -1,9 +1,9 @@
 import Dashboard from '@Views/Dashboard';
-import { IRoute } from './types';
 import About from '@Views/About';
 import Weather from '@Views/weather';
 import UserData from '@Views/UserData';
 import Charts from '@Views/Charts';
+import { IRoute } from './types';
 
 const appRoutes: IRoute[] = [
   {
@@ -12,7 +12,7 @@ const appRoutes: IRoute[] = [
     component: Dashboard,
     authenticated: false,
   },
-   {
+  {
     path: '/about',
     name: 'About',
     component: About,
