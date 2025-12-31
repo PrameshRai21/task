@@ -13,8 +13,11 @@ const CustomTooltip = ({
 
       {payload &&
         payload.map((item, index) => (
-          <p key={index} className="naxatw-text-sm">
-            <strong>{Number(item.value) / 1000000000} Billion</strong>
+          <p key={index} className="naxatw-flex naxatw-flex-col naxatw-text-sm">
+            {item.name}
+            <strong className="naxatw-text-green-600">
+              {Number(item.value) / 1000000000} Billion
+            </strong>
           </p>
         ))}
     </div>

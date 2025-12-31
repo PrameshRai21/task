@@ -1,4 +1,3 @@
-import { data } from '@Assets/chart_data/data';
 import {
   BarChart,
   Bar,
@@ -9,10 +8,15 @@ import {
   Tooltip,
   CartesianGrid,
 } from 'recharts';
-import CustomTooltip from './CustomTooltip';
+import CustomTooltip from '../CommonComponent/CustomTooltip';
+import { ChartData } from '@Types/index';
 
-const formatAxisTick = (value: any): string => {
-  return `*${value}*`;
+const formatXAxisTick = (value: any): string => {
+  return `${value} AD`;
+};
+
+const formatYAxisTick = (value: any): string => {
+  return `${value / 1000000000} B`;
 };
 
 const customBarLabel = ({ x, y, width, value }: any) => {
@@ -22,19 +26,21 @@ const customBarLabel = ({ x, y, width, value }: any) => {
       y={y}
       fill="#666"
       textAnchor="middle"
-      dy={-6}
-    >{`value: ${value}`}</text>
+      fontSize={14}
+      dy={-7}
+    >{`G.Profit: ${(value / 1000000000).toFixed(1)}B`}</text>
   );
 };
 
-function BarCharts() {
+function BarCharts({ chart_data }: ChartData | any) {
+  const data = chart_data?.data;
   return (
     <div className="container naxatw-flex naxatw-h-screen naxatw-w-screen naxatw-items-center naxatw-justify-center naxatw-font-primary">
       <div
         className="naxatw-bg-green-100"
         style={{ width: '100%', maxWidth: 800, aspectRatio: '1.618' }}
       >
-        <h3 className="naxatw-text-center">Bar Chart</h3>
+        <h3 className="naxatw-text-center">Gross Profit Bar Chart</h3>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>
             <CartesianGrid
@@ -43,23 +49,24 @@ function BarCharts() {
               strokeOpacity={'30%'}
             />
             <Bar
-              barSize={50}
-              dataKey={'uv'}
+              barSize={100}
+              dataKey={'grossProfit'}
               fill="#8884d8"
               label={customBarLabel}
             />
             <XAxis
-              stroke="purple"
-              dataKey={'name'}
-              tickFormatter={formatAxisTick}
+              stroke="#333333"
+              dataKey={'fiscalYear'}
+              tickFormatter={formatXAxisTick}
             />
             <YAxis
               domain={['auto', 'auto']}
-              stroke="purple"
+              stroke="#333333"
               width={70}
+              tickFormatter={formatYAxisTick}
               label={{
                 position: 'insideTopLeft',
-                value: 'UV',
+                value: 'grossProfit',
                 angle: -90,
                 dy: 70,
               }}
