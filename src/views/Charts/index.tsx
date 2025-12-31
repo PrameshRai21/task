@@ -9,9 +9,9 @@ function Charts() {
   return (
     <div>
       <LineChartComp chart_data={data} />
-      <BarCharts />
-      <AreaCharts />
-      <PieCharts />
+      <BarCharts chart_data={data} />
+      <AreaCharts chart_data={data} />
+      <PieCharts chart_data={data} />
     </div>
   );
 }

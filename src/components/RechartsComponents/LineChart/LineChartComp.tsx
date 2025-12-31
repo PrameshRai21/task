@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from 'recharts';
 import { ChartData } from '@Types/index';
-import CustomTooltip from './CustomTooltip';
+import CustomTooltip from '../CommonComponent/CustomTooltip';
 
 const formatAxisTick = (value: number) => {
   return `${value / 1000000000}B`;

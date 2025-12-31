@@ -56,5 +56,7 @@ export interface ChartData{
   fiscalYear: number,
   period: string,
   netIncome: number,
-  eps: number
+  grossProfit: number,
+  ebitda: number,
+  ebit: number,
 }
