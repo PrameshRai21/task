@@ -8,7 +8,7 @@ import {
   Cell,
 } from 'recharts';
 
-function PieCharts({ isAnimationActive = true }) {
+function PieCharts() {
   const COLORS = [
     '#0088FE',
     '#00C49F',
@@ -37,7 +37,7 @@ function PieCharts({ isAnimationActive = true }) {
               outerRadius="80%"
               innerRadius="40%"
               label
-              isAnimationActive
+              isAnimationActive={true}
               fill="purple"
             >
               {data.map((_, index) => (

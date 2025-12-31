@@ -1,17 +1,22 @@
 import { useState } from 'react';
 import { useFetchUserData } from '../../hooks/userHooks/useFetchUserApi';
-import { useDeleteUser } from '@Hooks/userHooks/useUserMutation';
 import { Pen } from 'lucide-react';
 import { Trash2 } from 'lucide-react';
 import UserForm from './UserForm';
 import { UserData } from '@Types/index';
+import ConfirmBox from './ConfirmBox';
 
 function UserTable() {
+  // for form modal
   const [visible, setVisible] = useState<boolean>(false);
   const [userData, setUserData] = useState<UserData | null>(null);
 
+  //for confirm modal
+  const [confirmDelete, setConfirmDelete] = useState<boolean>(false);
+  const [modalVisible, setModalVisible] = useState<boolean>(false);
+
   const { data } = useFetchUserData();
-  const { mutate: deleteUser } = useDeleteUser();
+
   return (
     <div className=" naxatw-fixed naxatw-mx-36 naxatw-font-primary">
       {visible && (
@@ -110,11 +115,22 @@ function UserTable() {
                       <Pen />
                     </button>
                     <button
-                      onClick={e => deleteUser(user.id)}
+                      onClick={() => setModalVisible(true)}
                       className="naxatw-rounded-md naxatw-border naxatw-p-1 naxatw-text-red-700 hover:naxatw-border hover:naxatw-border-red-700"
                     >
                       <Trash2 />
                     </button>
+                  </td>
+                  <td>
+                    {modalVisible && (
+                      <ConfirmBox
+                        confirmDelete={confirmDelete}
+                        setConfirmDelete={setConfirmDelete}
+                        modalVisible={modalVisible}
+                        setModalVisible={setModalVisible}
+                        user={user}
+                      />
+                    )}
                   </td>
                 </tr>
               ))

@@ -4,8 +4,13 @@ import { TQueryOptions, TMutationOptions } from '@Types/index';
 import { IAwardsData, IPostsPayload } from './types';
 import axios from 'axios';
 
+// weather api keys import 
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY;
 const URL = import.meta.env.VITE_WEATHER_URL;
+
+// income-statement api keys import
+const BASE_URL = import.meta.env.VITE_CHART_BASE_URL;
+const KEY = import.meta.env.VITE_CHART_API_KEY
 
 //function fetching weather api 
 export const getWeatherApi = (city: string) => {
@@ -25,6 +30,20 @@ export const userDataApi = axios.create({
     'Content-Type': 'application/json'
   }
 })
+
+// fetching data to represent in chart
+export const getChartApi = () => {
+  return axios.get(BASE_URL, {
+    params: {
+      symbol: 'AAPL',
+      apikey: KEY,
+    },
+    headers : {
+    'Content-Type': 'application/json'
+    }
+  })
+}
+
 
 export const useGetServicesQuery = () => {
   return useQuery({
