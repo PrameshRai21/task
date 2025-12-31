@@ -34,7 +34,7 @@ function PieCharts({ chart_data }: ChartData | any) {
               isAnimationActive={true}
               fill="purple"
             >
-              {data.map((_: any, index: number) => (
+              {data?.map((_: any, index: number) => (
                 <Cell
                   key={`cell-${index}`}
                   fill={COLORS[index % COLORS.length]}
