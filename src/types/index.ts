@@ -48,3 +48,13 @@ export interface UserData{
     website: string,
     company: CompanyType
 }
+
+// chart api data type
+export interface ChartData{
+  symbol: string,
+  reportedCurrency: string,
+  fiscalYear: number,
+  period: string,
+  netIncome: number,
+  eps: number
+}

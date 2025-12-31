@@ -3,6 +3,7 @@ import { UserData } from '@Types/index';
 import { useCreateUser, useUpdateUser } from '@Hooks/userHooks/useUserMutation';
 import { ArrowLeft } from 'lucide-react';
 import { useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const resolver: Resolver<UserData> = async values => {
   const errors: any = {};
@@ -53,6 +54,19 @@ function UserForm({ visible, setVisible, defaultUserData }: PropsType) {
     formState: { errors },
   } = useForm<UserData>({ resolver, defaultValues: defaultUserData ?? {} });
 
+  // toastify function
+  const addSuccess = () => {
+    toast.success('User Added Successfully!', {
+      position: 'top-center',
+    });
+  };
+
+  const editSuccess = () => {
+    toast.success('User Added Successfully!', {
+      position: 'top-center',
+    });
+  };
+
   useEffect(() => {
     if (defaultUserData) {
       reset(defaultUserData);
@@ -68,8 +82,10 @@ function UserForm({ visible, setVisible, defaultUserData }: PropsType) {
   const onSubmit = handleSubmit(data => {
     if (defaultUserData?.id) {
       updateUser({ id: defaultUserData.id, data });
+      editSuccess();
     } else {
       addUser(data);
+      addSuccess();
     }
     reset();
     setVisible(false);
@@ -77,6 +93,7 @@ function UserForm({ visible, setVisible, defaultUserData }: PropsType) {
 
   return (
     <div className="naxatw-fixed naxatw-inset-0 naxatw-flex naxatw-items-center naxatw-justify-center">
+      <ToastContainer />
       <div className="naxatw-flex naxatw-h-auto naxatw-w-[50%] naxatw-flex-col naxatw-items-center naxatw-justify-center naxatw-gap-y-5 naxatw-rounded-md naxatw-border naxatw-border-green-500 naxatw-bg-white naxatw-py-5">
         <div className="btn_holder naxatw-flex naxatw-w-full naxatw-items-center naxatw-gap-x-20 naxatw-pl-20">
           <button
