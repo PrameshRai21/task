@@ -33,6 +33,7 @@ function PieCharts({ chart_data }: ChartData | any) {
               label
               isAnimationActive={true}
               fill="purple"
+              legendType="circle"
             >
               {data?.map((_: any, index: number) => (
                 <Cell

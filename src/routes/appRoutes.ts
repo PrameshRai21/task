@@ -4,6 +4,7 @@ import Weather from '@Views/weather';
 import UserData from '@Views/UserData';
 import Charts from '@Views/Charts';
 import { IRoute } from './types';
+import OpenLayer from '@Views/Openlayer';
 
 const appRoutes: IRoute[] = [
   {
@@ -34,6 +35,12 @@ const appRoutes: IRoute[] = [
     path: '/charts',
     name: 'Charts',
     component: Charts,
+    authenticated: false,
+  },
+  {
+    path: '/openlayer',
+    name: 'Openlayer',
+    component: OpenLayer,
     authenticated: false,
   },
 ];
