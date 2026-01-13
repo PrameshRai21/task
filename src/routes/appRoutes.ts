@@ -5,6 +5,7 @@ import UserData from '@Views/UserData';
 import Charts from '@Views/Charts';
 import { IRoute } from './types';
 import OpenLayer from '@Views/Openlayer';
+import Maplibre from '@Views/Maplibre';
 
 const appRoutes: IRoute[] = [
   {
@@ -41,6 +42,12 @@ const appRoutes: IRoute[] = [
     path: '/openlayer',
     name: 'Openlayer',
     component: OpenLayer,
+    authenticated: false,
+  },
+  {
+    path: '/maplibre',
+    name: 'Maplibre',
+    component: Maplibre,
     authenticated: false,
   },
 ];
